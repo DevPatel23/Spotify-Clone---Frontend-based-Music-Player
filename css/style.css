@@ -1,0 +1,247 @@
+/************************************************* CSS Code ****************************************************/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(42, 226, 75);
+}
+
+
+
+/* ******************************************************************************************************************* */
+
+/* header{
+    position: sticky;
+    top: 10px;
+} */
+
+.navbar{
+    /* margin-top: 20px; */
+
+    /* background-color: black; */
+    /* color: white; */
+    /*height: 70px;*/                            /* ahi height, bgcolor, and fontcolor lakhe to chale*/
+    font-family: 'Ubuntu', sans-serif; 
+} 
+
+.navbar ul{
+    background-color: black;
+    color: white;
+    height: 70px;                             /* ahi height, bgcolor, and fontcolor lakhe to pn chale*/
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.brand img{
+    height: 50px;
+    padding: 0px 2px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar ul li{
+    font-size: 14px;
+    padding: 0px 20px;
+}
+
+
+/* ******************************************************************************************************************* */
+
+.container{
+    /* border: 2px solid red; */
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    background: url(../Harry\ clone/bg.jpg)no-repeat;
+    /* background-size: 165%; */                           /* aa use nai karvu..*/
+
+    /* height: 880px; */                  /* ni aape to to ghanu saru pota ni rite set thai jaay...*/
+    height: 115vh;                          /* aa prefer karvu...*/
+    /* width: 1300px; */                              /* aa pn use nai karvu..*/
+    width: 90%;
+    /* width: 90vw; */
+    margin: 15px auto;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif; 
+
+    display: flex;
+}
+
+.songList p{
+    font-size: 35px;
+}
+.songItemContainer{
+    /* margin-top: 60px; */
+    margin-top: 10vh;                            
+
+}
+.songItem{
+    margin-top: 15px;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+                                                /* width aape j ni to jate set thai jaay...*/
+    /* width: 700px;*/                           /*  aa nai aapvu........ responsive ni bane*/
+    /*width: 40vw;*/                          /* aa aapvu... */
+    /* height: 60px; */
+    height: 8vh;                           /* aa pn jo vh ma aapis to responsive banse */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-sharp {
+    padding: 0px 10px;
+}
+
+.songItem img{
+    height: 55px;
+    margin: 10px 10px;
+    border-radius: 50px;
+}
+.songItem i{
+    cursor: pointer;
+}
+/* #gif9{
+    height: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+} */
+
+/* ****************************************************************************************************************** */
+
+.bottom{
+    position: sticky;
+    bottom: 0px;
+    
+    background-color: black;
+    color: white;
+    height: 115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+   /* font-size: 2vw; */            /* ahi aa font size vw ma aapu to sliding window nani kare to aa fontimg pn nana thase...*/
+}
+
+#myProgressBar{
+    width: 60vw;                             /*  aa j prefer karvu to j responsive banse...*/
+    /* width: 900px; */               /* aa use karu to responsive ni bane */
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/*.masterChild{                   /* optional 6e aa to mari rite size aapi next-previous ne fa-3x cancel kari ne*/
+   /* font-size: 2.3rem;   
+}*/
+
+.icons i{
+    cursor: pointer;
+    padding: 0px 10px;
+}
+
+#gif{
+    height: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.songInfo{
+    position: absolute;
+    /* left: 300px; */                         /* px ma nai aapvu*/
+    left: 20vw;                                 /* same ahi pn aa use kare to j responsive banse...*/
+
+    position: absolute;  /*timeStamp mukya etle mare to mara code ma set karva padyu position */
+    bottom: 4.8vh;
+    left: 19.6vw;
+    font-size: 1.3rem;
+}
+
+#timeStamp1{
+    position: absolute;
+    bottom: 8.5vh;
+    left: 19.5vw;
+    opacity: 0.6;
+    font-family: 'Ubuntu', sans-serif; 
+}
+#timeStamp2{
+    position: absolute;
+    bottom: 8.5vh;
+    left: 77.7vw;
+    opacity: 0.6;
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+@media (max-width: 900px){
+    .icons{
+        font-size: 1.3vw;
+    }
+    #masterPlay{
+        position: absolute;
+        bottom: 2vh;
+        left: 45vw;
+    }
+    #next{
+        position: absolute;
+        bottom: 2vh;
+        left: 52vw;
+    }
+    #previous{
+        position: absolute;
+        bottom: 2vh;
+        left: 40vw;
+    }
+    /* .songInfo span{
+        font-size: 1rem;
+    } */
+    #timeStamp1{
+        bottom: 6.5vh;
+    }
+    #timeStamp2{
+        bottom: 6.5vh;
+    }
+    
+}
+@media (max-width: 700px){
+    .songList p{
+        font-size: 30px;
+    }
+    .songItemContainer{
+        margin-top: 40px;
+    }
+    .songInfo span{
+        bottom: 5vh;
+        left: 80vw;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 550px){
+    .songList p{
+        font-size: 20px;
+    }
+}
+@media (max-width: 350px){
+    .songList p{
+        font-size: 15px;
+    }
+}
+@media (max-width:900px){
+    body{
+        background-color: rgb(251, 216, 241);
+    } 
+}
